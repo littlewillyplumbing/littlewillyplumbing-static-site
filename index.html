@@ -135,6 +135,24 @@
       margin-top:18px;
     }
 
+    .hero-logo{
+        margin: 0 0 18px;
+    }
+
+    .hero-logo img{
+        width: min(800px, 100%);
+        max-height: 240px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+
+        border-radius: 18px;          /* optional */
+        border: 1px solid var(--border);
+        background: white;
+        box-shadow: var(--shadow);
+        padding: 10px;                /* optional: makes logo feel “framed” */
+    }
+
     @media (max-width: 860px){
       .hero-grid{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr}
@@ -168,6 +186,12 @@
       <section class="hero">
         <div class="hero-grid">
           <div>
+            <div class="hero-logo">
+                <img
+                    src="https://raw.githubusercontent.com/littlewillyplumbing/littlewillyplumbing-static-site/main/logo.png"
+                    alt="Little Willy's Plumbing Services"
+                />
+            </div>
             <h1>Simple, reliable plumbing — done right the first time.</h1>
             <p class="sub">
               Leak fixes, water heaters, drain clogs, and “why is this making that noise?” calls.
