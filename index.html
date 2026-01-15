@@ -53,13 +53,29 @@
       gap:12px;
     }
     .brand{
-      font-weight:900;
-      letter-spacing:-.2px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-weight:900;
+        letter-spacing:-.2px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        }
+
+    .nav-logo{
+    height:34px;
+    width:auto;
+    max-width:140px;
+    object-fit:contain;
+    display:block;
     }
-    .top-cta{
+
+    .brand-name{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    }
+.top-cta{
       font-weight:800;
       border:1px solid var(--hair);
       border-radius:999px;
@@ -75,6 +91,26 @@
       object-fit:contain;
       margin:0 0 18px;
     }
+    .hero-media{
+  width:100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+  overflow:hidden;
+  border:1px solid var(--hair);
+  background: #f8fafc;
+  margin: 10px 0 22px;
+
+  /* subtle depth */
+  box-shadow: 0 18px 50px rgba(2,6,23,.10);
+}
+
+.hero-media img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position: 50% 55%;
+}
     h1{
       margin:0 0 10px;
       font-size:clamp(28px, 4vw, 44px);
@@ -219,16 +255,27 @@
 <body>
   <header>
     <div class="topbar">
-      <div class="brand">Little Willy's Drain Cleaning</div>
-      <a class="top-cta" href="tel:+12623367174">Call (262) 336-7174</a>
+        <a class="brand" href="#top" aria-label="Little Willy's Drain Cleaning">
+        <img
+            class="nav-logo"
+            src="https://raw.githubusercontent.com/littlewillyplumbing/littlewillyplumbing-static-site/main/logo2.png"
+            alt=""
+        />
+  <span class="brand-name">Little Willy's Drain Cleaning</span>
+</a>
+        <a class="top-cta" href="tel:+12623367174">Call (262) 336-7174</a>
     </div>
   </header>
 
   <main class="wrap">
-    <img class="logo"
-      src="https://raw.githubusercontent.com/littlewillyplumbing/littlewillyplumbing-static-site/main/logo2.png"
-      alt="Little Willy's Drain Cleaning"
-    />
+    <div class="hero-media">
+  <img
+    src="https://raw.githubusercontent.com/littlewillyplumbing/littlewillyplumbing-static-site/main/willytruck.png"
+    alt="Little Willy's Drain Cleaning service truck"
+    loading="eager"
+    decoding="async"
+  />
+</div>
 
     <h1>Drain cleaning, done fast and clean.</h1>
     <p class="lead">
@@ -259,7 +306,7 @@
 
     <section aria-label="Basics">
       <h2>Basics</h2>
-      <div class="row"><span class="k">Service area</span><span class="v">Washington County + nearby</span></div>
+      <div class="row"><span class="k">Service area</span><span class="v">Washington County, WI + nearby</span></div>
       <div class="row"><span class="k">Response time</span><span class="v">Same day available</span></div>
       <div class="row"><span class="k">Hours</span><span class="v">24 hours (emergency)</span></div>
       <div class="row"><span class="k">Warranty</span><span class="v">1 yr parts/labor • 6 mo drains</span></div>
